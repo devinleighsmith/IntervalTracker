@@ -1,0 +1,61 @@
+.FilterBar {
+  background-color: darkmagenta;
+  color: white;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  white-space: nowrap;
+  select {
+    max-width: 10em;
+  }
+  > :last-child {
+    grid-column: 4;
+    border: none;
+  }
+}
+
+.orders {
+  grid-column: 2/3;
+}
+
+.filters {
+  grid-column: 3/4;
+  display: flex;
+  button {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 600px) {
+.FilterBar {
+  background-color: darkmagenta;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.filters :first-child, .orders div :last-child {
+  border-right: none;
+}
+}
+
+.dropdown button {
+  height: 100%;
+}
+
+.FilterBar :global {
+  .btn, .btn:not(:disabled):not(.disabled).active {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  .btn:not(:disabled):not(.disabled).active {
+    border-bottom: 1px solid white;
+  }
+  .btn:hover, .btn:hover:not(:disabled):not(.disabled):active, .btn:hover:not(:disabled):not(.disabled).active {
+    background-color: rgb(112, 66, 112);
+  }
+
+  .form-label {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,12 @@
+.dropdown {
+  button, button:not(:disabled):not(.disabled):active, button:hover, button:not(:disabled):not(.disabled):focus {
+    background-color: darkmagenta;
+    border-color: transparent;
+  }
+  > div {
+    background-color: darkmagenta;
+    a {
+      color: white;
+    }
+  }
+}

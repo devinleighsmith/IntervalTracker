@@ -1,0 +1,73 @@
+.IntervalItem {
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  input {
+    max-width: 50%;
+  }
+  :disabled {
+    background-color: transparent;
+    border: none;
+  }
+  :disabled:hover {
+    cursor: pointer;
+  }
+  > :first-child {
+    display: inline-flex;
+    .btnGroup {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .DateGroup {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.DateGroup {
+  display: flex;
+  input {
+    min-width: 10rem;
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :global .form-row {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding-right: 2rem;
+  }
+
+  :global .form-group {
+    margin: 0;
+  }
+}
+
+.DateGroup {
+  :global .form-row {
+    word-wrap: normal;
+  }
+}
+
+.times {
+  display: inline-flex;
+  justify-content: center;
+  p {
+    padding: 0 1rem;
+  }
+}
+
+
+.IntervalItem:hover {
+  cursor: pointer;
+  background-color: lightyellow !important;
+}
